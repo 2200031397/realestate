@@ -1,0 +1,18 @@
+{% load static %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Your Web Page</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/styles2.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Your Website</h1>
+        <p>Click the buttons below to insert a site or view a site.</p>
+        <div class="buttons">
+            <a href="{%url 'insertsite'%}" class="insert-button">Insert Site</a>
+            <a href="{%url 'display_property'%}" class="view-button">View Site</a>
+        </div>
+    </div>
+</body>
+</html>

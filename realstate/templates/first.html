@@ -1,0 +1,19 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Real Estate</title>
+        <link type="text/css" rel="stylesheet" href="{% static 'css/styles5.css'%}"/>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Real Estate</h1>
+        <p>Your source for finding the perfect property.</p>
+        <div class="buttons">
+            <a href="{% url 'home' %}" class="login-button">Login</a>
+            <a href="{% url 'signup' %}" class="signup-button">Sign Up</a>
+        </div>
+    </div>
+</body>
+</html>

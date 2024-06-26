@@ -1,0 +1,26 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Property Information</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/styles4.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Property Information</h1><br><br>
+        <h1 align="right">Contact Us: +91 *******278</h1>
+        <ul>
+            {% for entry in property_entries %}
+            <li>
+                Property Type: {{ entry.get_property_type_display }}<br>
+                Location:<a> {{ entry.location }}</a><br>
+                Price: ${{ entry.price }}<br>
+
+
+            </li>
+            {% endfor %}
+
+        </ul>
+    </div>
+</body>
+</html>

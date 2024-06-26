@@ -1,0 +1,19 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Land or Home Information</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/styles3.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Provide Information</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

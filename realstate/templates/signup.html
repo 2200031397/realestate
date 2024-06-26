@@ -1,0 +1,25 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/styles6.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Sign Up</h1>
+        <form method="POST" action="{%url 'registeruser'%}">
+            {% csrf_token %}
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <label for="password2">Confirm Password:</label>
+            <input type="password" id="password2" name="password2" required>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="{% url 'home' %}">Log in</a></p>
+    </div>
+</body>
+</html>
